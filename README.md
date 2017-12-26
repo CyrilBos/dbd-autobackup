@@ -35,7 +35,7 @@ You probably can use this with any other cloud storage provider (Dropbox, OneDri
 7. if it is still broken, use your manual backup created at step 2 of this second list. If it still does not work, that is not my fault, you might not have manually backupped your files properly at step 2, or something crazy unrelated to my code happened. *Please create an issue on the repository in that case*, so we can debug this for others. 
 8. Do not touch anything if you do not know what you are doing, you are not going to impress your hot neighbour/roommate with that (trust me, I tried) (unless you are a female, then go for it). 
 
-Tested on official updated Windows 10, latest Google Drive Desktop. Do not forget your 
+Tested on official updated Windows 10, latest Google Drive Desktop, Python 3.6.4. 
 
 # Bannable? Dangerous? 
 I Can not say a 100% sure no, but most probably should not be (99.9% no). This does not alter your game files, this is not run at the same time as Dead By Daylight nor does not try to hack it in anyway. The script is so short anyone should be able to understand it even without any programming knowledge. Or just ask your developer friend to check it for you (and please star it so people are more inclined to believe it), it should not take him/her much time.
