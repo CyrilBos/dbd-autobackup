@@ -11,27 +11,28 @@ You probably can use this with any other cloud storage provider (Dropbox, OneDri
 
 1. Create a Google account.
 2. Install and configure [Google Drive Desktop](https://www.google.com/drive/download/). **Preferably, let it be launched on startup**. 
-3. Install latest version of Python 3 for Windows (right now is 3.6.4), choose the **executable installer** at the bottom of [this page](https://www.python.org/downloads/release/python-364/). Choose x86-64 if your computer is running a 64bit platform (most likely if it is not old), x86 otherwise. **DO NOT FORGET TO TICK "Add Python 3.6 to PATH", and do not move where it has been installed afterwards.**
-4. Download the zipped source code of this repository (click the green "clone or download button" on this page), unzip it anywhere you want (avoid C:\Program Files and such, might create permission problems if you are not administrator. i.e C:\dbd-autobackup should be fine).
-5. open `dbd_backup.py` with a text editor (notepad++, sublime text, ... but avoid Word/Writer and such, these are text processors and not editors and might fuck up the encoding of the file. Basic notepad should be fine but I don't use it personally). 
-6. Modify the value of the variable `backup_root_path` to the location of your backup folder **INSIDE** your local Google Drive folder. I let my own path so it is clearer, yours should be similar if you let the default location at the installation, just replace the `YOURUSERNAME` and the `YOURSTEAMIDPROFILE`. It does not matter to keep the `Steam/userdata/YOURSTEAMIDPROFILE/381210/` part, you can replace it with whatever you want, but it helps you remind where is the location of the files actually used by the game when you want to restore it. 
-7. Modify the value of the variable `steam_userdata_path` at the top of the file to specify the location of your steam user data. To get your steam id profile if you have multiple steam accounts on the same, [follow these instructions](https://steamcommunity.com/sharedfiles/filedetails/?id=209000244), or use [https://steamidfinder.com/](https://steamidfinder.com/). 
-8. Modify the `autostart-dbd-backup.bat` file, replace `PATHTOTHEUNZIPPEDCODE\dbd_backup.py` by the path where you put the Python script you just modified in steps 6 and 7.
-9. Create a shortcut of the file (right click->Create shortcut), copy or cut this shortcut
-10. Open the execute command of windows (windows key + R), copy paste this command, and click OK:
+3. Create a folder inside the Google Drive folder, where the backups will be stored (name it something like "Backup"). 
+4. Install latest version of Python 3 for Windows (right now is 3.6.4), choose the **executable installer** at the bottom of [this page](https://www.python.org/downloads/release/python-364/). Choose x86-64 if your computer is running a 64bit platform (most likely if it is not old), x86 otherwise. **DO NOT FORGET TO TICK "Add Python 3.6 to PATH", and do not move where it has been installed afterwards.**
+5. Download the zipped source code of this repository (click the green "clone or download button" on this page), unzip it anywhere you want (avoid C:\Program Files and such, might create permission problems if you are not administrator. i.e C:\dbd-autobackup should be fine).
+6. open `dbd_backup.py` with a text editor (notepad++, sublime text, ... but avoid Word/Writer and such, these are text processors and not editors and might f*ck up the encoding of the file. Basic notepad should be fine but I don't use it personally). 
+7. Modify the value of the variable `backup_root_path` to the location of your backup folder **INSIDE** your local Google Drive folder (the one created at step 3). I left my own path so it is clearer, yours should be similar if you left the default location at the Google Drive desktop installation, just replace the `YOURUSERNAME` and the `YOURSTEAMIDPROFILE`. It does not matter to keep the `Steam/userdata/YOURSTEAMIDPROFILE/381210/` part, you can replace it with whatever you want, but keeping it helps you remember where are the files actually used by the game when you want to restore them. 
+8. Modify the value of the variable `steam_userdata_path` at the top of the file to specify the location of your steam user data. To get your steam id profile if you have multiple steam accounts on the same, [follow these instructions](https://steamcommunity.com/sharedfiles/filedetails/?id=209000244), or use [https://steamidfinder.com/](https://steamidfinder.com/). 
+9. Modify the `autostart-dbd-backup.bat` file, replace `PATHTOTHEUNZIPPEDCODE\dbd_backup.py` by the path where you put the Python script you just modified in steps 6 and 7.
+10. Create a shortcut of the file (right click->Create shortcut), copy or cut this shortcut
+11. Open the execute command of windows (windows key + R), copy paste this command, and click OK:
 ```shell:startup```
-11. It should have opened the windows explorer in the startup folder location (something like `C:\Users\YOURUSERNAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`), paste the shortcut in there.
-12. ???
-13. PROFIT
+12. It should have opened the windows explorer in the startup folder location (something like `C:\Users\YOURUSERNAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`), paste the shortcut in there.
+13. ???
+14. Profit
 
-Additional steps (testing it works): 
+## Additional steps (testing it works)
 1. might need to restart your computer for the new software to work correctly
 2. manually backup your save files somewhere safe
-3. run the script by double click on the shortcut inside the startup folder (follow step 10 to open it again)
+3. run the script by double click on the shortcut inside the startup folder (follow step 11 of the first list to open it again)
 4. delete the save files under your steam user data. Optional: launch the game and see that it does not work as intended
 5. use the files created by the automatic backup. located under your google drive folder (the `backup_root_path` location)
 6. launch the game and hopefully it works
-7. if it is still broken, use your manual backup created at step 2. If it still does not work, that is not my fault, you might not have manually backupped your files properly at step 2, or something crazy unrelated to my code happened. *Please create an issue on the repository in that case*, so we can debug this for others. 
+7. if it is still broken, use your manual backup created at step 2 of this second list. If it still does not work, that is not my fault, you might not have manually backupped your files properly at step 2, or something crazy unrelated to my code happened. *Please create an issue on the repository in that case*, so we can debug this for others. 
 8. Do not touch anything if you do not know what you are doing, you are not going to impress your hot neighbour/roommate with that (trust me, I tried) (unless you are a female, then go for it). 
 
 Tested on official updated Windows 10, latest Google Drive Desktop. Do not forget your 
