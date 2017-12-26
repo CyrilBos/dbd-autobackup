@@ -25,14 +25,14 @@ You probably can use this with any other cloud storage provider (Dropbox, OneDri
 13. PROFIT
 
 Additional steps (testing it works): 
-12.1. might need to restart your computer for the new software to work correctly
-12.2. manually backup your save files somewhere safe
-12.3. run the script by double click on the shortcut inside the startup folder (follow step 10 to open it again)
-12.4. delete the save files under your steam user data. Optional: launch the game and see that it does not work as intended
-12.5. use the files created by the automatic backup. located under your google drive folder (the `backup_root_path` location)
-12.6. launch the game and hopefully it works
-12.7. if it is still broken, use your manual backup created at step 12.2. If it still does not work, that is not my fault, you might not have manually backupped your files properly at step 12.2, or something crazy unrelated to my code happened. *Please create an issue on the repository in that case*, so we can debug this for others. 
-14. Do not touch anything if you don't know what you are doing, you are not going to impress your hot neighbour/roommate with that (trust me, I tried) (unless you are a female, then go for it). 
+1. might need to restart your computer for the new software to work correctly
+2. manually backup your save files somewhere safe
+3. run the script by double click on the shortcut inside the startup folder (follow step 10 to open it again)
+4. delete the save files under your steam user data. Optional: launch the game and see that it does not work as intended
+5. use the files created by the automatic backup. located under your google drive folder (the `backup_root_path` location)
+6. launch the game and hopefully it works
+7. if it is still broken, use your manual backup created at step 2. If it still does not work, that is not my fault, you might not have manually backupped your files properly at step 2, or something crazy unrelated to my code happened. *Please create an issue on the repository in that case*, so we can debug this for others. 
+8. Do not touch anything if you do not know what you are doing, you are not going to impress your hot neighbour/roommate with that (trust me, I tried) (unless you are a female, then go for it). 
 
 Tested on official updated Windows 10, latest Google Drive Desktop. Do not forget your 
 
